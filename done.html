@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html data-theme="light" class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.22.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="resources/script.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png" />
+    <title>Success!</title>
+  </head>
+
+  <body class="h-full">
+    <div
+      class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-md w-full space-y-8">
+        <div>
+          <img
+            id="theme-trigger"
+            class="mx-auto h-40 w-auto cursor-pointer"
+            src="resources/logo-done.png"
+          />
+          <h1
+            class="mt-6 text-center text-5xl font-extrabold text-primary-focus"
+          >
+            It's done, you're welcome!
+          </h1>
+          <form action="/home" method="POST" class="mt-8 text-center">
+            <label
+              for="redirect-button"
+              class="text-3xl font-extrabold text-accent-focus mr-2 cursor-pointer"
+              >Take me home</label
+            >
+            <button id="redirect-button" class="btn btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html data-theme="light" class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.22.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="resources/script.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png" />
+    <title>Spammed!</title>
+  </head>
+
+  <body class="h-full">
+    <div
+      class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-md w-full space-y-8">
+        <div>
+          <img
+            id="theme-trigger"
+            class="mx-auto h-40 w-auto cursor-pointer"
+            src="resources/logo-home.png"
+          />
+          <h1
+            class="mt-6 text-center text-5xl font-extrabold text-primary-focus"
+          >
+            Get Ready To Get Spammed!
+          </h1>
+        </div>
+        <form class="mt-8 space-y-6" action="/" method="POST">
+          <div class="flex w-full justify-between">
+            <div>
+              <input
+                name="firstName"
+                type="text"
+                class="input input-bordered input-primary w-full text-neutral font-bold"
+                placeholder="First Name"
+                autocomplete="off"
+              />
+            </div>
+            <div class="divider divider-horizontal"></div>
+            <div>
+              <input
+                name="lastName"
+                type="text"
+                class="input input-bordered input-primary w-full text-neutral font-bold"
+                placeholder="Last Name"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div>
+            <input
+              name="email"
+              type="email"
+              autocomplete="off"
+              class="input input-bordered input-primary w-full text-neutral font-bold"
+              placeholder="Email Address"
+            />
+          </div>
+
+          <div>
+            <label class="label cursor-pointer">
+              <span class="label-text font-bold text-primary">I agree to receive spam emails</span>
+              <input
+                type="checkbox"
+                checked="checked"
+                class="checkbox checkbox-primary"
+              />
+            </label>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="btn btn-primary w-full text-2xl font-bold text-primary hover:text-secondary"
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
