@@ -1,4 +1,3 @@
-const credentials = require(`${__dirname}/credentials.json`);
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
@@ -27,12 +26,12 @@ app.post("/", (req, res) => {
   };
 
   const userDataJson = JSON.stringify(userData);
-  const APIKey = "8d43ea322139d297463a1d3dd0e0697f-us17";
+  const apiKey = "cb20b7dc586b07818f38cb51cadf869e-us17";
   const listID = "f694b14a63";
-  const url = `https://us17.api.mailchimp.com/3.0/lists/${credentials.listID}`;
+  const url = `https://us17.api.mailchimp.com/3.0/lists/${listID}`;
   const options = {
     method: "POST",
-    auth: `harmsway:${credentials.apiKey}`,
+    auth: `harmsway:${apiKey}`,
   };
 
   const request = https.request(url, options, (response) => {
@@ -43,6 +42,7 @@ app.post("/", (req, res) => {
         res.sendFile(`${__dirname}/done.html`);
       } else {
         res.sendFile(`${__dirname}/error.html`);
+        console.log(response.statusCode);
       }
     });
   });
